@@ -25,16 +25,16 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "title", columnDefinition = "TEXT")
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "description", columnDefinition = "TEXT")
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "image_url", columnDefinition = "TEXT")
+    @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "author", columnDefinition = "TEXT")
+    @Column(name = "author")
     private String author;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -42,16 +42,19 @@ public class Book {
     @JoinColumn(name = "user_id")
     private User publisher;
 
-    public Book(String title, String description, String imageUrl, User publisher) {
+    // creating constructor without id
+    public Book(String title, String description, String imageUrl, String author, User publisher) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.author = author;
         this.publisher = publisher;
     }
 
-    public Book(String title, String description, String imageUrl) {
+    public Book(String title, String description, String imageUrl, String author) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.author = author;
     }
 }
