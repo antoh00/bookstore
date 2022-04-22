@@ -22,11 +22,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/v*/registration/**")
+                .antMatchers("/api/register/confirm**", "/h2-console/**", 
+                "/api/user/register", "/api/publisher/register", "/api/login")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
-                .formLogin();
+                .formLogin().loginProcessingUrl("/api/login")
+                .defaultSuccessUrl("/api/profile");
     }
 
     @Override
