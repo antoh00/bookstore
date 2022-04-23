@@ -2,6 +2,31 @@
 
 This project was given for selecting students for the first stage of Ingress Microservices BootCamp
 
+# Usage
+
+I used GMAIL as email service for this application. Whenever I deployed it to heroku, Google blocks my email service. So, if you want to test my API, then you can run it locally and test each endpoint. I did not included every step below. Because if I included each of them there would ton of images and you will be bored to read my explanation. Just run it locally for checking the parts which you interested in.
+
+# Requirement for running locally
+
+- ```Postman``` - for testing API
+- ```IntelliJ IDEA (or VS code)``` for opening project, for checking code
+- ```Java``` configure java on your pc
+
+# How to run locally
+
+- step 1. ```make sure that, you have installed java to your pc and added it to system path```
+- step 2. ```Make sure that, you have Visual Studio Code or IntelliJ IDEA (preffered)```
+- step 3. ```Clone project to your pc```
+- step 4. ```Open it with your favorite editor```
+- step 5. ```Do not change anything```
+- step 6. ```Run it```
+- step 7. ```Test endpoints you are interested in```
+
+# If you don't want to run locally
+
+I deployed API to heroku, but removed email sending option from it
+
+
 # Endpoint (detailed explanation of endpoints given below)
 
 - POST ```api/publisher/register``` registration for Publishers
