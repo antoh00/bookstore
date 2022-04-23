@@ -6,8 +6,11 @@ import me.eltacshikhsaidov.userloginregistration.entity.role.UserRole;
 import me.eltacshikhsaidov.userloginregistration.service.sender.EmailSender;
 import me.eltacshikhsaidov.userloginregistration.service.token.ConfirmationToken;
 import me.eltacshikhsaidov.userloginregistration.service.validator.EmailValidator;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 
@@ -25,7 +28,8 @@ public class RegistrationService {
                 test(request.getEmail());
 
         if (!isValidEmail) {
-            throw new IllegalStateException("email not valid");
+            // throw new IllegalStateException("email not valid");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "email not valid");
         }
 
         String token = userService.signUpUser(
@@ -51,16 +55,19 @@ public class RegistrationService {
         ConfirmationToken confirmationToken = confirmationTokenService
                 .getToken(token)
                 .orElseThrow(() ->
-                        new IllegalStateException("token not found"));
+                        // new IllegalStateException("token not found"));
+                        new ResponseStatusException(HttpStatus.NOT_FOUND, "token not found"));
 
         if (confirmationToken.getConfirmedAt() != null) {
-            throw new IllegalStateException("email already confirmed");
+            // throw new IllegalStateException("email already confirmed");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "email already confirmed");
         }
 
         LocalDateTime expiredAt = confirmationToken.getExpiresAt();
 
         if (expiredAt.isBefore(LocalDateTime.now())) {
-            throw new IllegalStateException("token expired");
+            // throw new IllegalStateException("token expired");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "token expired");
         }
 
         confirmationTokenService.setConfirmedAt(token);
