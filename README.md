@@ -2,6 +2,10 @@
 
 This project was given for selecting students for the first stage of Ingress Microservices BootCamp. Each endpoint from task is covered in this documentation. 
 
+# Attention
+
+Remember that, I used free Heroku server, so included api may be responded slowly. Please consider it while testing API
+
 # Feedback
 If you have any question or feedback about api kindly contact to me from LinkedIn: [linkedin](https://www.linkedin.com/in/eltac-shikhsaidov/)
 
