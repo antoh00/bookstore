@@ -30,7 +30,7 @@ I deployed API to heroku, but removed email sending option from it
 
 or
 
-https://taskingress.herokuapp.com/
+https://taskingress.herokuapp.com/ if you just open this link it will not work, try endpoints given below!
 
 Just test this api on Postman.
 
