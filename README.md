@@ -70,20 +70,19 @@ Now let's get detailed explanation of each endpoint
 
 ### 1. POST ```api/publisher/register``` registration for Publishers
 Let's first include invalid email, then we will get following result. As you can see message body is ```email not valid```
+
+![image](https://user-images.githubusercontent.com/56788221/164909054-06cb32e7-f91e-4a22-bab0-f9b3b2ab374d.png)
+
 <br>We registered as publisher, and from image we can see that it will return message ```confirmation link has been sent to your email address```
-<br> Above of this message there is ```confirmUrl```. This is just for testing purpose. For production deploy we will remove it for security.
-We added ```GMAIL``` for sending emails for users and publishers. But when we deploy it to server, Google block my email sender service. So if you want to check this project, clone it to your pc and run it from localhost, in that case everything should be OK.
 
 ![image](https://user-images.githubusercontent.com/56788221/164908922-fd29b07f-a155-42ed-896a-0f062e3da1cf.png)
+
+<br> Above of this message there is ```confirmUrl```. This is just for testing purpose. For production deploy we will remove it for security.
+We added ```GMAIL``` for sending emails for users and publishers. But when we deploy it to server, Google block my email sender service. So if you want to check this project, clone it to your pc and run it from localhost, in that case everything should be OK.
 
 If we again type previously registered email then get a message: ```email already taken```
 
 ![image](https://user-images.githubusercontent.com/56788221/164909142-9638f9a8-209d-4cfb-85ad-a2bc098ab025.png)
-
-
-Now, if we enter incorrect email format we wil get a message: ```email not valid```
-
-![image](https://user-images.githubusercontent.com/56788221/164909054-06cb32e7-f91e-4a22-bab0-f9b3b2ab374d.png)
 
 ### 2. POST ```api/user/register``` registration for Users
 
