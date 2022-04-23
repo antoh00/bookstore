@@ -34,27 +34,32 @@ public class Book {
     @Column(name = "image_url")
     private String imageUrl;
 
+    @Column(name = "book_url")
+    private String bookUrl;
+
     @Column(name = "author")
     private String author;
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "usr_id")
     private User publisher;
 
     // creating constructor without id
-    public Book(String title, String description, String imageUrl, String author, User publisher) {
+    public Book(String title, String description, String imageUrl, String author, String bookUrl, User publisher) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.bookUrl = bookUrl;
         this.author = author;
         this.publisher = publisher;
     }
 
-    public Book(String title, String description, String imageUrl, String author) {
+    public Book(String title, String description, String imageUrl, String bookUrl, String author) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.bookUrl = bookUrl;
         this.author = author;
     }
 }

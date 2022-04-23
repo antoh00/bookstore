@@ -73,6 +73,6 @@ public class RegistrationService {
 
         return "<p>Hi " 
                     + name + ". Please confirm your email with <a href=" 
-                    + link + " taget=\"_blank\">link</a>.It will expire after 15 minutes</p>";
+                    + link + " taget=\"_blank\">link</a>.It will expire after 15 minutes. Hurry up!</p>";
     }
 }

@@ -14,11 +14,12 @@ import java.util.*;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
+@Table(name = "usr")
 public class User implements UserDetails {
 
     @Id
-    @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
+    @SequenceGenerator(name = "usr_sequence", sequenceName = "usr_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usr_sequence")
     private Long id;
     private String firstName;
     private String lastName;
