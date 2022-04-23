@@ -42,7 +42,7 @@ public class RegistrationService {
                 )
         );
 
-        String link = "https://taskingress.herokuapp.com/api/register/confirm?token=" + token;
+        String link = "http://localhost:8080/api/register/confirm?token=" + token;
         emailSender.send(
                 request.getEmail(),
                 buildEmail(request.getFirstName(), link));
