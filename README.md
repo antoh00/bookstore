@@ -1,6 +1,9 @@
 # Complete Book Store Rest API
 
-This project was given for selecting students for the first stage of Ingress Microservices BootCamp. Each endpoint from task is covered in this documentation.
+This project was given for selecting students for the first stage of Ingress Microservices BootCamp. Each endpoint from task is covered in this documentation. 
+
+# Feedback
+If you have any question or feedback about api kindly contact to me from LinkedIn: [linkedin](https://www.linkedin.com/in/eltac-shikhsaidov/)
 
 # Usage
 
