@@ -42,7 +42,7 @@ public class ApiController {
         response.put("status", 200);
         response.put("message", "confirmation link has been sent to your email address");
         response.put("registeredAt", LocalDateTime.now());
-        response.put("confirmUrl", "https://taskingress.herokuapp.com/api/register/confirm?token=" + confirmation);
+        response.put("confirmUrl", "http://localhost:8080/api/register/confirm?token=" + confirmation);
         response.put("path", "/api/publisher/register");
 
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -60,7 +60,7 @@ public class ApiController {
         response.put("status", 200);
         response.put("message", "confirmation link has been sent to your email address");
         response.put("registeredAt", LocalDateTime.now());
-        response.put("confirmUrl", "https://taskingress.herokuapp.com/api/register/confirm?token=" + confirmation);
+        response.put("confirmUrl", "http://localhost:8080/api/register/confirm?token=" + confirmation);
         response.put("path", "/api/user/register");
 
         return new ResponseEntity<>(response, HttpStatus.OK);
