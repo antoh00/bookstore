@@ -6,6 +6,15 @@ This project was given for selecting students for the first stage of Ingress Mic
 
 I used GMAIL as email service for this application. Whenever I deployed it to heroku, Google blocks my email service. So, if you want to test my API, then you can run it locally and test each endpoint. I did not included every step below. Because if I included each of them there would ton of images and you will be bored to read my explanation. Just run it locally for checking the parts which you interested in.
 
+# Technologies used for this project
+- ```Spring Data JPA```
+- ```Spring Security```
+- ```Spring Web```
+- ```Lombok```
+- ```PostgreSQL```
+- ```Heroku```
+- ```Slf4J```
+
 # Requirement for running locally
 
 - ```Postman``` - for testing API
