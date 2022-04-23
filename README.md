@@ -1,6 +1,6 @@
 # Complete Book Store Rest API
 
-This project was given for selecting students for the first stage of Ingress Microservices BootCamp
+This project was given for selecting students for the first stage of Ingress Microservices BootCamp. Each endpoint from task is covered in this documentation.
 
 # Usage
 
@@ -25,6 +25,14 @@ I used GMAIL as email service for this application. Whenever I deployed it to he
 # If you don't want to run locally
 
 I deployed API to heroku, but removed email sending option from it
+
+[api link](https://taskingress.herokuapp.com/)
+
+or
+
+https://taskingress.herokuapp.com/
+
+Just test this api on Postman.
 
 
 # Endpoint (detailed explanation of endpoints given below)
