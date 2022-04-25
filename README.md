@@ -1,7 +1,3 @@
-# Update 25.04.2022
-I just received an email from heroku. There was mentioned that the database url shouldn't be 
-public that's why they changed it. If APİ link should not work for you then clone it to your PC and rename database url, username and password in ```application.properties``` file!
-
 # Complete Book Store Rest API
 
 This project was given for selecting students for the first stage of Ingress Microservices BootCamp. Each endpoint from task is covered in this documentation. 
